@@ -1,0 +1,31 @@
+{
+  "name": "baumartenverteilung",
+  "private": true,
+  "type": "module",
+  "description": "Illustrated atlas of tree species across Germany — Astro + Cloudflare Pages.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name baumartenverteilung",
+    "typecheck": "astro check && tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.9",
+    "@astrojs/react": "^4.4.2",
+    "astro": "^5.14.1",
+    "clsx": "^2.1.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.40.0"
+  }
+}

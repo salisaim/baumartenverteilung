@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3e6c9;
+  --color-paper-elev: #f7eed8;
+  --color-ink: #2b2118;
+  --color-ink-muted: #6b5c4b;
+  --color-ink-faint: #c4b7a0;
+  --color-kiefer: #5e7344;
+  --color-fichte: #6b4a30;
+  --color-buche: #8a9640;
+  --color-eiche: #4a6b3c;
+  --color-birke: #a8b070;
+  --color-tanne: #8b9a7a;
+  --color-douglasie: #3a5e48;
+  --font-display: "Fraunces", "Palatino Linotype", Palatino, serif;
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --radius-md: 12px;
+  --radius-xl: 16px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+}
+
+.atlas-paper {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(43, 33, 24, 0.04), transparent 50%),
+    repeating-radial-gradient(circle at 0 0, transparent 0, transparent 18px, rgba(43, 33, 24, 0.025) 19px, transparent 20px);
+}

@@ -1,0 +1,22 @@
+{
+  "paletteNote": "Display greens/browns. The plate still uses the original painted hues in classify-pixel.ts (POSTER_HEX).",
+  "species": [
+    { "id": "kiefer", "name": "Kiefer", "latin": "Pinus sylvestris", "hex": "#5E7344", "share": 21.8, "posterHex": "#2F7FA8" },
+    { "id": "fichte", "name": "Fichte", "latin": "Picea abies", "hex": "#6B4A30", "share": 20.9, "posterHex": "#C24B2A" },
+    { "id": "buche", "name": "Buche", "latin": "Fagus sylvatica", "hex": "#8A9640", "share": 16.6, "posterHex": "#D39A22" },
+    { "id": "eiche", "name": "Eiche", "latin": "Quercus", "hex": "#4A6B3C", "share": 11.5, "posterHex": "#4F8A45" },
+    { "id": "birke", "name": "Birke", "latin": "Betula", "hex": "#A8B070", "share": 4.7, "posterHex": "#7A4A6E" },
+    { "id": "tanne", "name": "Tanne", "latin": "Abies alba", "hex": "#8B9A7A", "share": 1.9, "posterHex": "#C9D6B8" },
+    { "id": "douglasie", "name": "Douglasie", "latin": "Pseudotsuga", "hex": "#3A5E48", "share": 2.4, "posterHex": "#2C6B58" }
+  ],
+  "shareSource": "BWI 2022 area shares of stocked timberland (approx.)",
+  "neighbors": [
+    { "code": "DK", "name": "Denmark", "iso": "208", "lon": 9.5, "lat": 56.15 },
+    { "code": "NL", "name": "Netherlands", "iso": "528", "lon": 4.7, "lat": 52.35 },
+    { "code": "BE", "name": "Belgium", "iso": "056", "lon": 4.15, "lat": 50.5 },
+    { "code": "FR", "name": "France", "iso": "250", "lon": 4.9, "lat": 48.15 },
+    { "code": "PL", "name": "Poland", "iso": "616", "lon": 16.85, "lat": 52.05 },
+    { "code": "CZ", "name": "Czechia", "iso": "203", "lon": 16.15, "lat": 49.65 },
+    { "code": "AT", "name": "Austria", "iso": "040", "lon": 14.35, "lat": 47.15 }
+  ]
+}
