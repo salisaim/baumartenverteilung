@@ -11,7 +11,8 @@ type Props = {
 };
 
 const POSTER = "/baumarten.jpg";
-const CROP_BOTTOM = 0.892;
+const FALLBACK = "/baumarten-green.jpg";
+const CROP_HEIGHT = 1398;
 const PAPER = [243, 230, 201] as const;
 
 function hexRgb(hex: string): [number, number, number] {
@@ -102,7 +103,7 @@ export function Atlas({ focus, onFocus }: Props) {
     const cw = Math.max(280, Math.floor(wrap.clientWidth));
     const ch = Math.max(360, Math.floor(wrap.clientHeight));
     const srcW = img.naturalWidth;
-    const srcH = img.naturalHeight * CROP_BOTTOM;
+    const srcH = Math.min(img.naturalHeight, CROP_HEIGHT);
     const scale = Math.min(cw / srcW, ch / srcH);
     const w = Math.max(1, Math.round(srcW * scale));
     const h = Math.max(1, Math.round(srcH * scale));
@@ -208,13 +209,13 @@ export function Atlas({ focus, onFocus }: Props) {
         className="relative w-full overflow-hidden"
         style={{ aspectRatio: "1264 / 1398" }}
       >
-        {!ready ? (
-          <img
-            src={POSTER}
-            alt=""
-            className="pointer-events-none absolute inset-0 size-full object-contain object-top"
-          />
-        ) : null}
+        <img
+          src={FALLBACK}
+          alt=""
+          className="pointer-events-none absolute inset-0 size-full object-contain object-top"
+          decoding="async"
+          fetchPriority="high"
+        />
         {error ? (
           <p className="absolute inset-0 grid place-items-center font-sans text-sm text-ink-muted">{error}</p>
         ) : null}
